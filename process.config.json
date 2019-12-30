@@ -1,0 +1,11 @@
+{
+  "txTimeout": 300000,
+  "skipInit": true,
+  "controllers": [
+    {
+      "name": "process-cc",
+      "version": "file:./packages/process-cc",
+      "controller": "ProcessController"
+    }
+  ]
+}

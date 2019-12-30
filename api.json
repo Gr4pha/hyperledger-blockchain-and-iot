@@ -1,0 +1,325 @@
+[
+    {
+        "function": "create",
+        "verb": "post",
+        "controller": "AuthorityController"
+    },
+    {
+        "function": "notify_new_process",
+        "verb": "post",
+        "controller": "AuthorityController"
+    },
+    {
+        "function": "approve_process",
+        "verb": "post",
+        "controller": "AuthorityController"
+    },
+    {
+        "function": "refuse_process",
+        "verb": "post",
+        "controller": "AuthorityController"
+    },
+    {
+        "function": "get",
+        "verb": "get",
+        "controller": "AuthorityController"
+    },
+    {
+        "function": "get_record",
+        "verb": "get",
+        "controller": "AuthorityController"
+    },
+    {
+        "function": "get_all",
+        "verb": "get",
+        "controller": "AuthorityController"
+    },
+    {
+        "function": "get_all_records",
+        "verb": "get",
+        "controller": "AuthorityController"
+    },
+
+
+
+    {
+        "function": "create",
+        "verb": "post",
+        "controller": "CrossBorderController"
+    },
+    {
+        "function": "cross",
+        "verb": "post",
+        "controller": "CrossBorderController"
+    },
+    {
+        "function": "get",
+        "verb": "get",
+        "controller": "CrossBorderController"
+    },
+    {
+        "function": "get_record",
+        "verb": "get",
+        "controller": "CrossBorderController"
+    },
+    {
+        "function": "get_all",
+        "verb": "get",
+        "controller": "CrossBorderController"
+    },
+    {
+        "function": "get_all_records",
+        "verb": "get",
+        "controller": "CrossBorderController"
+    },
+    {
+        "function": "get_tx_history",
+        "verb": "get",
+        "controller": "CrossBorderController"
+    },
+
+
+
+    {
+        "function": "create",
+        "verb": "post",
+        "controller": "DGController"
+    },
+    {
+        "function": "get",
+        "verb": "get",
+        "controller": "DGController"
+    },
+    {
+        "function": "get_all",
+        "verb": "get",
+        "controller": "DGController"
+    },
+    {
+        "function": "get_tx_history",
+        "verb": "get",
+        "controller": "DGController"
+    },
+
+
+
+    {
+        "function": "create",
+        "verb": "post",
+        "controller": "IoTController"
+    },
+    {
+        "function": "attach_to_dg",
+        "verb": "post",
+        "controller": "IoTController"
+    },
+    {
+        "function": "detach_from_dg",
+        "verb": "post",
+        "controller": "IoTController"
+    },
+    {
+        "function": "attach_to_transport",
+        "verb": "post",
+        "controller": "IoTController"
+    },
+    {
+        "function": "detach_from_transport",
+        "verb": "post",
+        "controller": "IoTController"
+    },
+    {
+        "function": "attach_to_warehouse",
+        "verb": "post",
+        "controller": "IoTController"
+    },
+    {
+        "function": "detach_from_warehouse",
+        "verb": "post",
+        "controller": "IoTController"
+    },
+    {
+        "function": "get_location",
+        "verb": "post",
+        "controller": "IoTController"
+    },
+    {
+        "function": "get_location_historic",
+        "verb": "post",
+        "controller": "IoTController"
+    },
+    {
+        "function": "collect_location",
+        "verb": "post",
+        "controller": "IoTController"
+    },
+    {
+        "function": "get_humidity",
+        "verb": "post",
+        "controller": "IoTController"
+    },
+    {
+        "function": "get_humidity_historic",
+        "verb": "post",
+        "controller": "IoTController"
+    },
+    {
+        "function": "collect_humidity",
+        "verb": "post",
+        "controller": "IoTController"
+    },
+    {
+        "function": "get_temperature",
+        "verb": "post",
+        "controller": "IoTController"
+    },
+    {
+        "function": "get_temperature_historic",
+        "verb": "post",
+        "controller": "IoTController"
+    },
+    {
+        "function": "collect_temperature",
+        "verb": "post",
+        "controller": "IoTController"
+    },
+    {
+        "function": "get",
+        "verb": "get",
+        "controller": "IoTController"
+    },
+    {
+        "function": "get_all",
+        "verb": "get",
+        "controller": "IoTController"
+    },
+    {
+        "function": "get_tx_history",
+        "verb": "get",
+        "controller": "IoTController"
+    },
+
+
+
+    {
+        "function": "initialize",
+        "verb": "post",
+        "controller": "ProcessController"
+    },
+    {
+        "function": "schedule_move",
+        "verb": "post",
+        "controller": "ProcessController"
+    },
+    {
+        "function": "approve",
+        "verb": "post",
+        "controller": "ProcessController"
+    },
+    {
+        "function": "refuse",
+        "verb": "post",
+        "controller": "ProcessController"
+    },
+    {
+        "function": "move",
+        "verb": "post",
+        "controller": "ProcessController"
+    },
+    {
+        "function": "deliver",
+        "verb": "post",
+        "controller": "ProcessController"
+    },
+    {
+        "function": "finalize",
+        "verb": "post",
+        "controller": "ProcessController"
+    },
+    {
+        "function": "get",
+        "verb": "get",
+        "controller": "ProcessController"
+    },
+    {
+        "function": "get_all",
+        "verb": "get",
+        "controller": "ProcessController"
+    },
+    {
+        "function": "get_tx_history",
+        "verb": "get",
+        "controller": "ProcessController"
+    },
+
+
+
+    {
+        "function": "create",
+        "verb": "post",
+        "controller": "TransportController"
+    },
+    {
+        "function": "move",
+        "verb": "post",
+        "controller": "TransportController"
+    },
+    {
+        "function": "get_location",
+        "verb": "get",
+        "controller": "TransportController"
+    },
+    {
+        "function": "update_location",
+        "verb": "post",
+        "controller": "TransportController"
+    },
+    {
+        "function": "get",
+        "verb": "get",
+        "controller": "TransportController"
+    },
+    {
+        "function": "get_all",
+        "verb": "get",
+        "controller": "TransportController"
+    },
+    {
+        "function": "get_tx_history",
+        "verb": "get",
+        "controller": "TransportController"
+    },
+
+
+
+    {
+        "function": "create",
+        "verb": "post",
+        "controller": "WarehouseController"
+    },
+    {
+        "function": "store_dgs",
+        "verb": "post",
+        "controller": "WarehouseController"
+    },
+    {
+        "function": "unstore_dgs",
+        "verb": "post",
+        "controller": "WarehouseController"
+    },
+    {
+        "function": "get",
+        "verb": "get",
+        "controller": "WarehouseController"
+    },
+    {
+        "function": "get_all",
+        "verb": "get",
+        "controller": "WarehouseController"
+    },
+    {
+        "function": "get_tx_history",
+        "verb": "get",
+        "controller": "WarehouseController"
+    }
+]

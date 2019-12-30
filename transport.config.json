@@ -1,0 +1,11 @@
+{
+  "txTimeout": 300000,
+  "skipInit": true,
+  "controllers": [
+    {
+      "name": "transport-cc",
+      "version": "file:./packages/transport-cc",
+      "controller": "TransportController"
+    }
+  ]
+}

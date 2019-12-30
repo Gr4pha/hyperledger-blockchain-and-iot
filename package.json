@@ -1,0 +1,43 @@
+{
+  "name": "bc_and_iot",
+  "version": "0.1.0",
+  "description": "Bootstrap project for Blockchain & IoT",
+  "files": [
+    "dist/*"
+  ],
+  "scripts": {
+    "install": "npm-run-all -s lerna:install",
+    "env:clean": "hurl clean",
+    "env:restart": "hurl new -n network-topology.json --skip-download",
+    "cc:start": "f() { npm run cc:package -- $1; npm run cc:install $1 $2; }; f",
+    "cc:upgrade": "f() { npm run cc:package -- $1; hurl upgrade -C ch-global -P ./chaincode-$1 -o dgprovider -o dgreceiver -o dgtransporter ${3:-$1} node $2; }; f",
+    "test": "npm-run-all -s lerna:test",
+    "test:e2e": "npm-run-all -s lerna:test:e2e",
+    "user:fingerprint": "f() { node -e \"const homedir = require('os').homedir(); console.log(JSON.parse(require('fs').readFileSync('/'+homedir+'/hyperledger-fabric-network/.hfc-$2/$1', 'utf8')).enrollment.identity.certificate)\" | openssl x509 -fingerprint -noout | cut -d '=' -f2; }; f",
+    "api:start": "f() { npx lerna bootstrap; npx lerna run start --scope server --stream; }; f",
+    "===================INTERNALS===================": "===================NO NEED TO CALL THEM DIRECTLY===================",
+    "lerna:install": "lerna bootstrap",
+    "lerna:build": "lerna run build",
+    "cc:package": "f() { npm run lerna:build; chaincode-manager --update --config ./$1.config.json --output ./chaincode-$1 package; }; f",
+    "cc:manager:packaging": "f() { chaincode-manager --update --config ./$1.config.json --output ./chaincode-$1 package; }; f",
+    "cc:install": "f() { hurl install -C ch-global -P ./chaincode-$1 -o dgprovider -o dgreceiver -o dgtransporter -c '{\"Args\":[\"init\", \"\"]}' ${2:-$1} node; }; f",
+    "lerna:test": "lerna run test --stream",
+    "lerna:test:e2e": "lerna run test:e2e --stream",
+    "===================DEFAULTS===================": "===================NO NEED TO CALL THEM DIRECTLY===================",
+    "default:env:restart": "hurl new",
+    "default:cc:start": "f() { npm run cc:package -- $1; npm run default:cc:install $1 $2; }; f",
+    "default:cc:install": "f() { hurl install ${2:-$1} node -P ./chaincode-$1; }; f",
+    "default:cc:upgrade": "f() { npm run cc:package -- $1; hurl upgrade ${3:-$1} node $2  -P ./chaincode-$1; }; f",
+    "default:cc:start:debug": "f() { npm run cc:package -- $1; npm run default:cc:install:debug $1 $2; }; f",
+    "default:cc:install:debug": "f() { hurl install ${2:-$1} node -P ./chaincode-$1 --debug; }; f"
+  },
+  "devDependencies": {
+    "lerna": "~3.13.0",
+    "@worldsibu/convector-adapter-mock": "~1.3.6",
+    "@worldsibu/convector-platform-fabric": "~1.3.6",
+    "@worldsibu/hurley": "~1.1.1",
+    "fabric-ca-client": "^1.4.4",
+    "fabric-client": "^1.4.4",
+    "npm-run-all": "~4.1.5"
+  }
+}

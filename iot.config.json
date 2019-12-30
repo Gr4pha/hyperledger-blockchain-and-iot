@@ -1,0 +1,11 @@
+{
+  "txTimeout": 300000,
+  "skipInit": true,
+  "controllers": [
+    {
+      "name": "iot-cc",
+      "version": "file:./packages/iot-cc",
+      "controller": "IoTController"
+    }
+  ]
+}

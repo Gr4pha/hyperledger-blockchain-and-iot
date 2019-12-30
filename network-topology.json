@@ -1,0 +1,33 @@
+{
+	"channels": ["ch-global", "ch-de", "ch-fr"],
+	"topology": {
+		"dgprovider": {
+			"channels": ["ch-global"],
+			"users": ["User1", "User2"]
+		},
+		"dgreceiver": {
+			"channels": ["ch-global"],
+			"users": ["User1", "User2"]
+		},
+		"dgtransporter": {
+			"channels": ["ch-global"],
+			"users": ["User1", "User2"]
+		},
+		"localauthorityde": {
+			"channels": ["ch-global", "ch-de"],
+			"users": ["User1", "User2"]
+		},
+		"localauthorityfr": {
+			"channels": ["ch-global", "ch-fr"],
+			"users": ["User1", "User2"]
+		},
+		"warehousede": {
+			"channels": ["ch-global", "ch-de"],
+			"users": ["User1", "User2"]
+		},
+		"warehousefr": {
+			"channels": ["ch-global", "ch-fr"],
+			"users": ["User1", "User2"]
+		}
+	}
+}

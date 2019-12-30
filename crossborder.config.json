@@ -1,0 +1,11 @@
+{
+  "txTimeout": 300000,
+  "skipInit": true,
+  "controllers": [
+    {
+      "name": "crossborder-cc",
+      "version": "file:./packages/crossborder-cc",
+      "controller": "CrossBorderController"
+    }
+  ]
+}

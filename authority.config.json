@@ -1,0 +1,11 @@
+{
+  "txTimeout": 300000,
+  "skipInit": true,
+  "controllers": [
+    {
+      "name": "authority-cc",
+      "version": "file:./packages/authority-cc",
+      "controller": "AuthorityController"
+    }
+  ]
+}

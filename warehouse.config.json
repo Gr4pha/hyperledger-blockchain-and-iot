@@ -1,0 +1,11 @@
+{
+  "txTimeout": 300000,
+  "skipInit": true,
+  "controllers": [
+    {
+      "name": "warehouse-cc",
+      "version": "file:./packages/warehouse-cc",
+      "controller": "WarehouseController"
+    }
+  ]
+}
