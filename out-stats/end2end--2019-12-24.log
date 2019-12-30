@@ -1,0 +1,625 @@
+> Machine settings...
+
+>>> Distrib:
+Linux dg_sec_248 4.15.0-72-generic #81-Ubuntu SMP Tue Nov 26 12:20:02 UTC 2019 x86_64 x86_64 x86_64 GNU/Linux
+
+Distributor ID:	Ubuntu
+Description:	Ubuntu 18.04.3 LTS
+Release:	18.04
+Codename:	bionic
+
+>>> Disk:
+Filesystem      Size  Used Avail Use% Mounted on
+/dev/sda2        74G   35G   36G  49% /
+
+>>> RAM:
+              total        used        free      shared  buff/cache   available
+Mem:            15G        4.6G        4.7G        5.0M        6.4G         10G
+Swap:          2.0G        124M        1.9G
+
+
+> Removing old containers and old compiled stuffs...
+
+> bc_and_iot@0.1.0 env:clean /home/<USER>/bc_and_iot
+> hurl clean
+
+[hurley] - ************ Success!
+[hurley] - Environment cleaned!
+OK
+
+
+> Restarting the network...
+Creating ch-global channel block in peer peer0.dgprovider.hurley.lab
+Joining ch-global channel on peer peer0.dgprovider.hurley.lab
+Joining ch-global channel on peer peer0.dgreceiver.hurley.lab
+Joining ch-global channel on peer peer0.dgtransporter.hurley.lab
+Joining ch-global channel on peer peer0.localauthorityde.hurley.lab
+Joining ch-global channel on peer peer0.localauthorityfr.hurley.lab
+Joining ch-global channel on peer peer0.warehousede.hurley.lab
+Joining ch-global channel on peer peer0.warehousefr.hurley.lab
+Creating ch-global anchor block in peer peer0.dgprovider.hurley.lab
+Creating ch-global anchor block in peer peer0.dgreceiver.hurley.lab
+Creating ch-global anchor block in peer peer0.dgtransporter.hurley.lab
+Creating ch-global anchor block in peer peer0.localauthorityde.hurley.lab
+Creating ch-global anchor block in peer peer0.localauthorityfr.hurley.lab
+Creating ch-global anchor block in peer peer0.warehousede.hurley.lab
+Creating ch-global anchor block in peer peer0.warehousefr.hurley.lab
+Creating ch-de channel block in peer peer0.localauthorityde.hurley.lab
+Joining ch-de channel on peer peer0.localauthorityde.hurley.lab
+Joining ch-de channel on peer peer0.warehousede.hurley.lab
+Creating ch-de anchor block in peer peer0.localauthorityde.hurley.lab
+Creating ch-de anchor block in peer peer0.warehousede.hurley.lab
+Creating ch-fr channel block in peer peer0.localauthorityfr.hurley.lab
+Joining ch-fr channel on peer peer0.localauthorityfr.hurley.lab
+Joining ch-fr channel on peer peer0.warehousefr.hurley.lab
+Creating ch-fr anchor block in peer peer0.localauthorityfr.hurley.lab
+Creating ch-fr anchor block in peer peer0.warehousefr.hurley.lab
+Registering admin for dgprovider
+Registering admin for dgreceiver
+Registering admin for dgtransporter
+Registering admin for localauthorityde
+Registering admin for localauthorityfr
+Registering admin for warehousede
+Registering admin for warehousefr
+Registering User1 for dgprovider
+Registering User2 for dgprovider
+Registering User1 for dgreceiver
+Registering User2 for dgreceiver
+Registering User1 for dgtransporter
+Registering User2 for dgtransporter
+Registering User1 for localauthorityde
+Registering User2 for localauthorityde
+Registering User1 for localauthorityfr
+Registering User2 for localauthorityfr
+Registering User1 for warehousede
+Registering User2 for warehousede
+Registering User1 for warehousefr
+Registering User2 for warehousefr
+OK
+
+
+→ Crawling general data...
+Total blocks count: 8
+Delta blocks count: 8
+← Done.
+
+→ Initialize output file...
+← Done.
+
+→ Crawling blocks...
+← Done.
+
+→ Removing blocks...
+← Done.
+
+----------------------------------------------------
+[IN]
+Peer: peer0.dgprovider.hurley.lab
+Org: dgprovider
+Channel: ch-global
+Orderer: orderer.hurley.lab
+Skipped blocks: 0
+HLF path: /home/<USER>/hyperledger-fabric-network/fabric-binaries/1.4.0/bin
+Project path: /home/<USER>/bc_and_iot/out-stats/
+----------------------------------------------------
+[OUT]
+Results: /home/<USER>/bc_and_iot/out-stats/out--bc-weight--provider--0.csv
+----------------------------------------------------
+Time spent (s): 5
+Time spent (min): 0
+----------------------------------------------------
+Finished.
+
+→ Crawling general data...
+Total blocks count: 8
+Delta blocks count: 8
+← Done.
+
+→ Initialize output file...
+← Done.
+
+→ Crawling blocks...
+← Done.
+
+→ Removing blocks...
+← Done.
+
+----------------------------------------------------
+[IN]
+Peer: peer0.dgtransporter.hurley.lab
+Org: dgtransporter
+Channel: ch-global
+Orderer: orderer.hurley.lab
+Skipped blocks: 0
+HLF path: /home/<USER>/hyperledger-fabric-network/fabric-binaries/1.4.0/bin
+Project path: /home/<USER>/bc_and_iot/out-stats/
+----------------------------------------------------
+[OUT]
+Results: /home/<USER>/bc_and_iot/out-stats/out--bc-weight--transporter--0.csv
+----------------------------------------------------
+Time spent (s): 6
+Time spent (min): 0
+----------------------------------------------------
+Finished.
+
+> Building and packaging chaincodes...
+
+> bc_and_iot@0.1.0 lerna:build /home/<USER>/bc_and_iot
+> lerna run build
+
+
+> dg-cc@0.1.0 build /home/<USER>/bc_and_iot/packages/dg-cc
+> npm run clean && tsc
+
+
+> dg-cc@0.1.0 clean /home/<USER>/bc_and_iot/packages/dg-cc
+> rimraf dist client
+
+
+> crossborder-cc@0.1.0 build /home/<USER>/bc_and_iot/packages/crossborder-cc
+> npm run clean && tsc
+
+
+> crossborder-cc@0.1.0 clean /home/<USER>/bc_and_iot/packages/crossborder-cc
+> rimraf dist client
+
+
+> authority-cc@0.1.0 build /home/<USER>/bc_and_iot/packages/authority-cc
+> npm run clean && tsc
+
+
+> authority-cc@0.1.0 clean /home/<USER>/bc_and_iot/packages/authority-cc
+> rimraf dist client
+
+
+> iot-cc@0.1.0 build /home/<USER>/bc_and_iot/packages/iot-cc
+> npm run clean && tsc
+
+
+> iot-cc@0.1.0 clean /home/<USER>/bc_and_iot/packages/iot-cc
+> rimraf dist client
+
+
+> process-cc@0.1.0 build /home/<USER>/bc_and_iot/packages/process-cc
+> npm run clean && tsc
+
+
+> process-cc@0.1.0 clean /home/<USER>/bc_and_iot/packages/process-cc
+> rimraf dist client
+
+
+> transport-cc@0.1.0 build /home/<USER>/bc_and_iot/packages/transport-cc
+> npm run clean && tsc
+
+
+> transport-cc@0.1.0 clean /home/<USER>/bc_and_iot/packages/transport-cc
+> rimraf dist client
+
+
+> warehouse-cc@0.1.0 build /home/<USER>/bc_and_iot/packages/warehouse-cc
+> npm run clean && tsc
+
+
+> warehouse-cc@0.1.0 clean /home/<USER>/bc_and_iot/packages/warehouse-cc
+> rimraf dist client
+
+
+> server@1.0.0 build /home/<USER>/bc_and_iot/packages/server
+> npm run clean && tsc
+
+
+> server@1.0.0 clean /home/<USER>/bc_and_iot/packages/server
+> rimraf dist client
+
+
+> bc_and_iot@0.1.0 cc:manager:packaging /home/<USER>/bc_and_iot
+> f() { chaincode-manager --update --config ./$1.config.json --output ./chaincode-$1 package; }; f "authority"
+
+
+> bc_and_iot@0.1.0 cc:manager:packaging /home/<USER>/bc_and_iot
+> f() { chaincode-manager --update --config ./$1.config.json --output ./chaincode-$1 package; }; f "crossborder"
+
+
+> bc_and_iot@0.1.0 cc:manager:packaging /home/<USER>/bc_and_iot
+> f() { chaincode-manager --update --config ./$1.config.json --output ./chaincode-$1 package; }; f "dg"
+
+
+> bc_and_iot@0.1.0 cc:manager:packaging /home/<USER>/bc_and_iot
+> f() { chaincode-manager --update --config ./$1.config.json --output ./chaincode-$1 package; }; f "iot"
+
+
+> bc_and_iot@0.1.0 cc:manager:packaging /home/<USER>/bc_and_iot
+> f() { chaincode-manager --update --config ./$1.config.json --output ./chaincode-$1 package; }; f "process"
+
+
+> bc_and_iot@0.1.0 cc:manager:packaging /home/<USER>/bc_and_iot
+> f() { chaincode-manager --update --config ./$1.config.json --output ./chaincode-$1 package; }; f "transport"
+
+
+> bc_and_iot@0.1.0 cc:manager:packaging /home/<USER>/bc_and_iot
+> f() { chaincode-manager --update --config ./$1.config.json --output ./chaincode-$1 package; }; f "warehouse"
+
+OK
+
+
+> Installing chaincodes...
+[hurley] - installing smart contract located at /home/<USER>/bc_and_iot/chaincode-crossborder
+Installing Chaincode crossborder version 1.0 at dgprovider
+Installed Chaincode crossborder version 1.0 at dgprovider
+Installing Chaincode crossborder version 1.0 at dgreceiver
+Installed Chaincode crossborder version 1.0 at dgreceiver
+Installing Chaincode crossborder version 1.0 at dgtransporter
+Installed Chaincode crossborder version 1.0 at dgtransporter
+Installing Chaincode crossborder version 1.0 at localauthorityde
+Installed Chaincode crossborder version 1.0 at localauthorityde
+Installing Chaincode crossborder version 1.0 at localauthorityfr
+Installed Chaincode crossborder version 1.0 at localauthorityfr
+Installing Chaincode crossborder version 1.0 at warehousede
+Installed Chaincode crossborder version 1.0 at warehousede
+Installing Chaincode crossborder version 1.0 at warehousefr
+Installed Chaincode crossborder version 1.0 at warehousefr
+Instantiating Chaincode at dgprovider for channel ch-global
+It may take a few minutes depending on the chaincode dependencies
+Instantiated Chaincode at dgprovider
+[hurley] - installing smart contract located at /home/<USER>/bc_and_iot/chaincode-dg
+Installing Chaincode dg version 1.0 at dgprovider
+Installed Chaincode dg version 1.0 at dgprovider
+Installing Chaincode dg version 1.0 at dgreceiver
+Installed Chaincode dg version 1.0 at dgreceiver
+Installing Chaincode dg version 1.0 at dgtransporter
+Installed Chaincode dg version 1.0 at dgtransporter
+Installing Chaincode dg version 1.0 at localauthorityde
+Installed Chaincode dg version 1.0 at localauthorityde
+Installing Chaincode dg version 1.0 at localauthorityfr
+Installed Chaincode dg version 1.0 at localauthorityfr
+Installing Chaincode dg version 1.0 at warehousede
+Installed Chaincode dg version 1.0 at warehousede
+Installing Chaincode dg version 1.0 at warehousefr
+Installed Chaincode dg version 1.0 at warehousefr
+Instantiating Chaincode at dgprovider for channel ch-global
+It may take a few minutes depending on the chaincode dependencies
+Instantiated Chaincode at dgprovider
+[hurley] - installing smart contract located at /home/<USER>/bc_and_iot/chaincode-iot
+Installing Chaincode iot version 1.0 at dgprovider
+Installed Chaincode iot version 1.0 at dgprovider
+Installing Chaincode iot version 1.0 at dgreceiver
+Installed Chaincode iot version 1.0 at dgreceiver
+Installing Chaincode iot version 1.0 at dgtransporter
+Installed Chaincode iot version 1.0 at dgtransporter
+Installing Chaincode iot version 1.0 at localauthorityde
+Installed Chaincode iot version 1.0 at localauthorityde
+Installing Chaincode iot version 1.0 at localauthorityfr
+Installed Chaincode iot version 1.0 at localauthorityfr
+Installing Chaincode iot version 1.0 at warehousede
+Installed Chaincode iot version 1.0 at warehousede
+Installing Chaincode iot version 1.0 at warehousefr
+Installed Chaincode iot version 1.0 at warehousefr
+Instantiating Chaincode at dgprovider for channel ch-global
+It may take a few minutes depending on the chaincode dependencies
+Instantiated Chaincode at dgprovider
+[hurley] - installing smart contract located at /home/<USER>/bc_and_iot/chaincode-process
+Installing Chaincode process version 1.0 at dgprovider
+Installed Chaincode process version 1.0 at dgprovider
+Installing Chaincode process version 1.0 at dgreceiver
+Installed Chaincode process version 1.0 at dgreceiver
+Installing Chaincode process version 1.0 at dgtransporter
+Installed Chaincode process version 1.0 at dgtransporter
+Installing Chaincode process version 1.0 at localauthorityde
+Installed Chaincode process version 1.0 at localauthorityde
+Installing Chaincode process version 1.0 at localauthorityfr
+Installed Chaincode process version 1.0 at localauthorityfr
+Installing Chaincode process version 1.0 at warehousede
+Installed Chaincode process version 1.0 at warehousede
+Installing Chaincode process version 1.0 at warehousefr
+Installed Chaincode process version 1.0 at warehousefr
+Instantiating Chaincode at dgprovider for channel ch-global
+It may take a few minutes depending on the chaincode dependencies
+Instantiated Chaincode at dgprovider
+[hurley] - installing smart contract located at /home/<USER>/bc_and_iot/chaincode-transport
+Installing Chaincode transport version 1.0 at dgprovider
+Installed Chaincode transport version 1.0 at dgprovider
+Installing Chaincode transport version 1.0 at dgreceiver
+Installed Chaincode transport version 1.0 at dgreceiver
+Installing Chaincode transport version 1.0 at dgtransporter
+Installed Chaincode transport version 1.0 at dgtransporter
+Installing Chaincode transport version 1.0 at localauthorityde
+Installed Chaincode transport version 1.0 at localauthorityde
+Installing Chaincode transport version 1.0 at localauthorityfr
+Installed Chaincode transport version 1.0 at localauthorityfr
+Installing Chaincode transport version 1.0 at warehousede
+Installed Chaincode transport version 1.0 at warehousede
+Installing Chaincode transport version 1.0 at warehousefr
+Installed Chaincode transport version 1.0 at warehousefr
+Instantiating Chaincode at dgprovider for channel ch-global
+It may take a few minutes depending on the chaincode dependencies
+Instantiated Chaincode at dgprovider
+[hurley] - installing smart contract located at /home/<USER>/bc_and_iot/chaincode-authority
+Installing Chaincode authority version 1.0 at localauthorityde
+Installed Chaincode authority version 1.0 at localauthorityde
+Installing Chaincode authority version 1.0 at warehousede
+Installed Chaincode authority version 1.0 at warehousede
+Instantiating Chaincode at localauthorityde for channel ch-de
+It may take a few minutes depending on the chaincode dependencies
+Instantiated Chaincode at localauthorityde
+[hurley] - installing smart contract located at /home/<USER>/bc_and_iot/chaincode-warehouse
+Installing Chaincode warehouse version 1.0 at localauthorityde
+Installed Chaincode warehouse version 1.0 at localauthorityde
+Installing Chaincode warehouse version 1.0 at warehousede
+Installed Chaincode warehouse version 1.0 at warehousede
+Instantiating Chaincode at localauthorityde for channel ch-de
+It may take a few minutes depending on the chaincode dependencies
+Instantiated Chaincode at localauthorityde
+[hurley] - installing smart contract located at /home/<USER>/bc_and_iot/chaincode-authority
+Installing Chaincode authority version 1.0 at localauthorityfr
+Installed Chaincode authority version 1.0 at localauthorityfr
+Installing Chaincode authority version 1.0 at warehousefr
+Installed Chaincode authority version 1.0 at warehousefr
+Instantiating Chaincode at localauthorityfr for channel ch-fr
+It may take a few minutes depending on the chaincode dependencies
+Instantiated Chaincode at localauthorityfr
+[hurley] - installing smart contract located at /home/<USER>/bc_and_iot/chaincode-warehouse
+Installing Chaincode warehouse version 1.0 at localauthorityfr
+Installed Chaincode warehouse version 1.0 at localauthorityfr
+Installing Chaincode warehouse version 1.0 at warehousefr
+Installed Chaincode warehouse version 1.0 at warehousefr
+Instantiating Chaincode at localauthorityfr for channel ch-fr
+It may take a few minutes depending on the chaincode dependencies
+Instantiated Chaincode at localauthorityfr
+OK
+
+Elapsed time (network): 00:21:46
+
+
+> Invoking each chaincode to init them...
+
+>> dg-cc...
+[hurley] - Sending transaction as User1 in org dgprovider...
+[hurley] - Transaction sent! VALID  SUCCESS 8e66f2e2663ccbcc4b92d2558bd75fb896605de6c03b8b9c6744d3589346ffca
+[hurley] - Result: []
+Cleaning up event hubs
+[hurley] - Sending transaction as User1 in org dgreceiver...
+[hurley] - Transaction sent! VALID  SUCCESS 6b35c73abfd0c3ecb1104ae9d0cb5a5742e90930a305b2246ddcea6ee21a0bdd
+[hurley] - Result: []
+Cleaning up event hubs
+[hurley] - Sending transaction as User1 in org dgtransporter...
+[hurley] - Transaction sent! VALID  SUCCESS 385cbc2480b9e91030f759cec1b29d28820f2e1056ea8040901b0e9cfa07bb24
+[hurley] - Result: []
+Cleaning up event hubs
+[hurley] - Sending transaction as User1 in org localauthorityde...
+[hurley] - Transaction sent! VALID  SUCCESS f4818355f7fc60ea2ec9844ed454cccdf2d34bf296cf82afffc2953af778887b
+[hurley] - Result: []
+Cleaning up event hubs
+[hurley] - Sending transaction as User1 in org localauthorityfr...
+[hurley] - Transaction sent! VALID  SUCCESS c4db76d7b26b45682c8174336cb2e2bad188b28524c66ced9ab1283207300f7d
+[hurley] - Result: []
+Cleaning up event hubs
+[hurley] - Sending transaction as User1 in org warehousede...
+[hurley] - Transaction sent! VALID  SUCCESS ef7562a542e73bff2048b999c4989bd16c9efe7e43135d9bc7186f9bff9d75ad
+[hurley] - Result: []
+Cleaning up event hubs
+[hurley] - Sending transaction as User1 in org warehousefr...
+[hurley] - Transaction sent! VALID  SUCCESS a10975a534181c9c4a3592dfef6374f1512f9c55fbc9ccde8a23d49b816560aa
+[hurley] - Result: []
+Cleaning up event hubs
+
+>> iot-cc...
+[hurley] - Sending transaction as User1 in org dgprovider...
+[hurley] - Transaction sent! VALID  SUCCESS b1e6df7d8bad0845469456eff348946495c2a92ad0133c9b20264406815caa8a
+[hurley] - Result: []
+Cleaning up event hubs
+[hurley] - Sending transaction as User1 in org dgreceiver...
+[hurley] - Transaction sent! VALID  SUCCESS 41264f4adf0d28c8efb5eb6a68998c1b50f51a39a72dc1cfd624b72c814e50e0
+[hurley] - Result: []
+Cleaning up event hubs
+[hurley] - Sending transaction as User1 in org dgtransporter...
+[hurley] - Transaction sent! VALID  SUCCESS 48bbbc8f85bb25c5319766a8fe03e82ba57c3f15755b1a58d65437d80f448929
+[hurley] - Result: []
+Cleaning up event hubs
+[hurley] - Sending transaction as User1 in org localauthorityde...
+[hurley] - Transaction sent! VALID  SUCCESS a7cfc72fce796932d621e07963049776de9e49b71f15c197e03d076ecd8123df
+[hurley] - Result: []
+Cleaning up event hubs
+[hurley] - Sending transaction as User1 in org localauthorityfr...
+[hurley] - Transaction sent! VALID  SUCCESS 89926dd076756e6ac661dfe26f9d0786fbaa101d4cc944f4acda7c49c2de2ab2
+[hurley] - Result: []
+Cleaning up event hubs
+[hurley] - Sending transaction as User1 in org warehousede...
+[hurley] - Transaction sent! VALID  SUCCESS 9d9d4af3b0ab74a8ef989068e3d96443535853a1f210f0126b571016222c148c
+[hurley] - Result: []
+Cleaning up event hubs
+[hurley] - Sending transaction as User1 in org warehousefr...
+[hurley] - Transaction sent! VALID  SUCCESS a3c36114900a1adc10eac410b86bf9b0f43cdc8db0fc1f81ac8d5c55f7255f37
+[hurley] - Result: []
+Cleaning up event hubs
+
+>> process-cc...
+[hurley] - Sending transaction as User1 in org dgprovider...
+[hurley] - Transaction sent! VALID  SUCCESS d1b20dbdbe4a4615d0b766a3e883aaec74229f6eacf158b2dd706047afbe1e39
+[hurley] - Result: []
+Cleaning up event hubs
+[hurley] - Sending transaction as User1 in org dgreceiver...
+[hurley] - Transaction sent! VALID  SUCCESS 2a2814fa81246d8e2764bd9c990aefbce0e525baace23c376c6b20b6c8b1637a
+[hurley] - Result: []
+Cleaning up event hubs
+[hurley] - Sending transaction as User1 in org dgtransporter...
+[hurley] - Transaction sent! VALID  SUCCESS af1fc720fb20d07ec54577942b08930d8642b641729c2ce562e52b1b7acbdecb
+[hurley] - Result: []
+Cleaning up event hubs
+[hurley] - Sending transaction as User1 in org localauthorityde...
+[hurley] - Transaction sent! VALID  SUCCESS a899f9b8c721875c5b32452793bd0076dedf32571b91ffba8b27b3835b5d8bcf
+[hurley] - Result: []
+Cleaning up event hubs
+[hurley] - Sending transaction as User1 in org localauthorityfr...
+[hurley] - Transaction sent! VALID  SUCCESS bcf498e3883a996b596c26c93272180bd6d332925302b92b42b666708bdeeb67
+[hurley] - Result: []
+Cleaning up event hubs
+[hurley] - Sending transaction as User1 in org warehousede...
+[hurley] - Transaction sent! VALID  SUCCESS aebd2b0c3d5f78f340050105260e9ca8ac1ed38120e8c725db3e4b12ade3d593
+[hurley] - Result: []
+Cleaning up event hubs
+[hurley] - Sending transaction as User1 in org warehousefr...
+[hurley] - Transaction sent! VALID  SUCCESS 49600b2a4f1e1cfc065fcb8296030b3f424c6dcba3af8d78022ba05e028d7c93
+[hurley] - Result: []
+Cleaning up event hubs
+
+>> transport-cc...
+[hurley] - Sending transaction as User1 in org dgprovider...
+[hurley] - Transaction sent! VALID  SUCCESS bce4dec563d67e694d4f5bd3e8ac1d620d6f849682a7bc54af2e9c15fee295f8
+[hurley] - Result: []
+Cleaning up event hubs
+[hurley] - Sending transaction as User1 in org dgreceiver...
+[hurley] - Transaction sent! VALID  SUCCESS 1641e460fb8dd3ef1ce0b81ba07757c812ca30492c2748f5bf9b9ffee1a4ba1f
+[hurley] - Result: []
+Cleaning up event hubs
+[hurley] - Sending transaction as User1 in org dgtransporter...
+[hurley] - Transaction sent! VALID  SUCCESS bb13133fccf63c5ed6a53ac2fb3e6057635e0c9314a94ab210b7c857a2396fd5
+[hurley] - Result: []
+Cleaning up event hubs
+[hurley] - Sending transaction as User1 in org localauthorityde...
+[hurley] - Transaction sent! VALID  SUCCESS ec45dcd2f7c067e142f9bdba17acfcd7498d7a85dfad2c6d9217145fd0247aa7
+[hurley] - Result: []
+Cleaning up event hubs
+[hurley] - Sending transaction as User1 in org localauthorityfr...
+[hurley] - Transaction sent! VALID  SUCCESS 058ff7048b5b44ae5081abb284aaca64ad7575815a809949c7112abdc78f25dd
+[hurley] - Result: []
+Cleaning up event hubs
+[hurley] - Sending transaction as User1 in org warehousede...
+[hurley] - Transaction sent! VALID  SUCCESS 46a91c3b0be91baea21fc92e650c766638a1bcefc8b7fb8887b54dd658958b75
+[hurley] - Result: []
+Cleaning up event hubs
+[hurley] - Sending transaction as User1 in org warehousefr...
+[hurley] - Transaction sent! VALID  SUCCESS 51f858a7eab8f7b719a29d1043b5faf48c03332ca62217377f0f8e701382d1d3
+[hurley] - Result: []
+Cleaning up event hubs
+
+>> authority-cc...
+[hurley] - Sending transaction as User1 in org localauthorityde...
+[hurley] - Transaction sent! VALID  SUCCESS 1c2c647e6b33d6f24a20c33859b188821be1619eb7da776db7dfb881efcb30f4
+[hurley] - Result: []
+Cleaning up event hubs
+[hurley] - Sending transaction as User1 in org localauthorityfr...
+[hurley] - Transaction sent! VALID  SUCCESS e479149a4b05ca555a87abd478c9d9fe0bba43628fe5d908c4ba5ad94d9e8efb
+[hurley] - Result: []
+Cleaning up event hubs
+
+>> warehouse-cc...
+[hurley] - Sending transaction as User1 in org warehousede...
+[hurley] - Transaction sent! VALID  SUCCESS e1d6f6e854ac5aad05ef4849e4ac972aba04497bcc2e4005ee467d6718b1c1c4
+[hurley] - Result: []
+Cleaning up event hubs
+[hurley] - Sending transaction as User1 in org warehousefr...
+[hurley] - Transaction sent! VALID  SUCCESS 255bd1420b1063b2b9f8417d9c309988846fb9885c3fc74ab37de91ee3e18eab
+[hurley] - Result: []
+Cleaning up event hubs
+
+>> crossborder-cc...
+[hurley] - Sending transaction as User1 in org dgprovider...
+[hurley] - Transaction sent! VALID  SUCCESS 8d6ea2829c912314b80c9a60d02783208a4400f024ca79f56cc474d0daf2775e
+[hurley] - Result: []
+Cleaning up event hubs
+[hurley] - Sending transaction as User1 in org dgreceiver...
+[hurley] - Transaction sent! VALID  SUCCESS 6cd2140cb3e8177c6fe67d1f460445c0432d44efda68f0f18bd3b558bc4d6246
+[hurley] - Result: []
+Cleaning up event hubs
+[hurley] - Sending transaction as User1 in org dgtransporter...
+[hurley] - Transaction sent! VALID  SUCCESS 02cf6ee0e8cf229d6031b802a1c81bb2aa2a002a53d650ceea85e017b330d7e8
+[hurley] - Result: []
+Cleaning up event hubs
+[hurley] - Sending transaction as User1 in org localauthorityde...
+[hurley] - Transaction sent! VALID  SUCCESS 66341db6af608a665f57a1c7c1d80517dc103ba66ccb2c64d39eb0ab00d9ca7c
+[hurley] - Result: []
+Cleaning up event hubs
+[hurley] - Sending transaction as User1 in org localauthorityfr...
+[hurley] - Transaction sent! VALID  SUCCESS 4e125a1bd247efd1358147ca232b02df6ebf23cc5af9a3645597d33a6847937a
+[hurley] - Result: []
+Cleaning up event hubs
+[hurley] - Sending transaction as User1 in org warehousede...
+[hurley] - Transaction sent! VALID  SUCCESS f561aa0267f8630feb769f04f0c8828ecad153e800ae1ed916083556bd475e3e
+[hurley] - Result: []
+Cleaning up event hubs
+[hurley] - Sending transaction as User1 in org warehousefr...
+[hurley] - Transaction sent! VALID  SUCCESS 500e00a634cab8410aafe85e0631e74592027afcbae88a819efe6ca75ad19525
+[hurley] - Result: []
+Cleaning up event hubs
+Done
+
+Elapsed time (cc init): 01:06:05
+
+
+→ Crawling general data...
+Total blocks count: 48
+Delta blocks count: 48
+← Done.
+
+→ Initialize output file...
+← Done.
+
+→ Crawling blocks...
+← Done.
+
+→ Removing blocks...
+← Done.
+
+----------------------------------------------------
+[IN]
+Peer: peer0.dgprovider.hurley.lab
+Org: dgprovider
+Channel: ch-global
+Orderer: orderer.hurley.lab
+Skipped blocks: 0
+HLF path: /home/<USER>/hyperledger-fabric-network/fabric-binaries/1.4.0/bin
+Project path: /home/<USER>/bc_and_iot/out-stats/
+----------------------------------------------------
+[OUT]
+Results: /home/<USER>/bc_and_iot/out-stats/out--bc-weight--provider--1.csv
+----------------------------------------------------
+Time spent (s): 36
+Time spent (min): 0
+----------------------------------------------------
+Finished.
+
+→ Crawling general data...
+Total blocks count: 48
+Delta blocks count: 48
+← Done.
+
+→ Initialize output file...
+← Done.
+
+→ Crawling blocks...
+← Done.
+
+→ Removing blocks...
+← Done.
+
+----------------------------------------------------
+[IN]
+Peer: peer0.dgtransporter.hurley.lab
+Org: dgtransporter
+Channel: ch-global
+Orderer: orderer.hurley.lab
+Skipped blocks: 0
+HLF path: /home/<USER>/hyperledger-fabric-network/fabric-binaries/1.4.0/bin
+Project path: /home/<USER>/bc_and_iot/out-stats/
+----------------------------------------------------
+[OUT]
+Results: /home/<USER>/bc_and_iot/out-stats/out--bc-weight--transporter--1.csv
+----------------------------------------------------
+Time spent (s): 35
+Time spent (min): 0
+----------------------------------------------------
+Finished.
+
+Total elapsed time: 01:07:16
+> Machine status...
+
+>>> Disk:
+Filesystem      Size  Used Avail Use% Mounted on
+/dev/sda2        74G   33G   39G  46% /
+
+>>> RAM:
+              total        used        free      shared  buff/cache   available
+Mem:            15G        9.7G        1.7G        4.7M        4.3G        5.7G
+Swap:          2.0G        311M        1.7G
+
+
