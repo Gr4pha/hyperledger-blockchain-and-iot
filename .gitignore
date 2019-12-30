@@ -1,0 +1,27 @@
+# No hidden files/folders
+#.*
+# No temporary files
+tmp*
+TMP*
+~*
+*~
+# No temporary folders
+tmp/
+tmp*/
+# No link files
+*.lnk
+*.ln
+# No executable files
+*.exe
+*.com
+*.bin
+
+# No 'bak' folder and archive
+_bak/
+__bak/
+*.bak.zip
+# No 'todo' files
+todo.md
+todo.txt
+todo
+
