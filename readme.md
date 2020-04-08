@@ -1,9 +1,13 @@
 # Blockchain and IoT in Dangerous Goods transportation
 
 
-**Author:** Jonathan Lamont
+**Author:** Jonathan Lamont & Adnan IMERI
 
 **Date:** 24-12-2019
+
+**Modified** 08-04.2020
+
+
 
 ---
 
