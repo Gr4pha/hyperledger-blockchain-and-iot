@@ -23,17 +23,12 @@
 
 ### Project description
 
-Project which aims to test and measure the behavior of the Hyperledger Fabric blockchain regarding a simple end to end testing scenario including goods transportation and IoT tracing.
-
-We have implemented a simple scenario into different chaincodes / smart-contracts. We have simulated the data providing by IoTs through NodeRED. And we have tested and measured some metrics thanks to bash scripts.
+The project aims to test and measure the behavior of the Hyperledger Fabric blockchain and IoT device.  We have implemented a simple scenario into different chain codes (smart contracts). We have simulated the data providing by IoTs through NodeRED. And we have tested and measured some metrics thanks to bash scripts.
 
 ### Scenario
 
-Goods have to be carried from a provider to a receiver thanks to a transporter.
-We assume that goods are still stored in warehouses, except when they are carrying.
-The provider is in Germany and the receiver is in France.
-Authorities must be notified for each transport and have to grant the transport, even in case of cross-border transportation.
-IoT devices can be attached to goods or trucks or warehouses in order to collect data such as humidity rate, GPS geolocation, or temperature.
+Goods have to be carried from a provider to a receiver thanks to a transporter. We assume that goods are still stored in warehouses, except when they are carrying. The provider is in Germany, and the receiver is in France. Authorities must be notified for each transport and must grant the transport, even in cross-border transportation. IoT devices can be attached to goods or trucks or warehouses to collect data such as humidity rate, GPS geolocation, or temperature.
+
 
 ### Details
 
