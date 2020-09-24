@@ -17,7 +17,7 @@
 [TOC]
 
 ---
-
+The published research article is available in the following link: https://www.researchgate.net/publication/342354049_Blockchain_and_IoT_integrated_approach_for_a_trusted_and_secured_process_to_manage_the_transportation_of_dangerous_goods
 
 ## 1. Overview
 
